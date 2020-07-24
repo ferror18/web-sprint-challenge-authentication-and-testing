@@ -5,22 +5,22 @@ module.exports = {
     connection: { filename: './database/auth.db3' },
     useNullAsDefault: true,
     migrations: {
-      directory: './database/migrations/development',
+      directory: './database/migrations',
       tableName: 'dbmigrations',
     },
-    seeds: { directory: './database/seeds/development' },
+    seeds: { directory: './database/seeds' },
   },
   testing: {
         client: "sqlite3",
         connection: {
-            filename: "./data/test.db3",
+            filename: "./database/test.db3",
         },
         useNullAsDefault: true,
         migrations: {
-            directory: "./data/migrations/testing",
+            directory: "./database/migrations",
         },
         seeds: {
-            directory: "./data/seeds/testing",
+            directory: "./database/seeds",
         },
     },
 
@@ -33,10 +33,10 @@ module.exports = {
             max: 10,
         },
         migrations: {
-            directory: "./data/migrations/production",
+            directory: "./database/migrations",
         },
         seeds: {
-            directory: "./data/seeds/production",
+            directory: "./database/seeds",
         },
     },
 };
